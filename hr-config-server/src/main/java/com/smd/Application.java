@@ -2,12 +2,14 @@ package com.smd;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
+@EnableConfigServer
 @SpringBootApplication
-public class HrConfigServerApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HrConfigServerApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
