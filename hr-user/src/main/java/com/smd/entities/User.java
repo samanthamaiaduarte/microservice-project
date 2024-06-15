@@ -14,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity(name = "tb_user")
 public class User implements Serializable {
 
@@ -22,11 +24,12 @@ public class User implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(length=200, nullable = false)
+	@Column(nullable = false, length = 200)
 	private String name;
-	@Column(length=200, nullable = false)
+	@Column(nullable = false, length = 200, unique = true)
 	private String email;
-	@Column(length=100, nullable = false)
+	@JsonIgnore
+	@Column(nullable = false, length = 100)
 	private String password;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
@@ -46,13 +49,25 @@ public class User implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
+	public Long getId( ) {
+		return id;
+	}
 
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public String getName() {
+		return name;
+	}
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public String getEmail() {
+		return email;
 	}
 
 	public void setPassword(String password) {
