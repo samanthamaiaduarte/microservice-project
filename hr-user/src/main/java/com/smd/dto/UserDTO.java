@@ -13,6 +13,8 @@ public class UserDTO implements Serializable {
 	private Long id;
 	private String name;
 	private String email;
+	private String password;
+	
 	private Set<Role> roles;
 
 	public UserDTO() { }
@@ -22,6 +24,7 @@ public class UserDTO implements Serializable {
 		this.id = user.getId();
 		this.name = user.getName();
 		this.email = user.getEmail();
+		this.password = user.getPassword();
 		this.roles = user.getRoles();
 	}
 
@@ -47,6 +50,14 @@ public class UserDTO implements Serializable {
 
 	public String getEmail() {
 		return email;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+	
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public void setRoles(Set<Role> roles) {

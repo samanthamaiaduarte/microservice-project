@@ -74,6 +74,10 @@ public class User implements Serializable {
 		this.password = password;
 	}
 	
+	public String getPassword() {
+		return password;
+	}
+	
 	public Set<Role> getRoles() {
 		return roles;
 	}
