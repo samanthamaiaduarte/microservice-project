@@ -99,3 +99,6 @@ replay_pid*
 #Maven
 HELP.md
 target/
+
+#Personal
+.materiais-aula/
