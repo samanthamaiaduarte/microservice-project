@@ -10,7 +10,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @SpringBootApplication
 public class Application implements CommandLineRunner {
 	
-	@Value("${spring.cloud.config.server.git.username}")
+	//@Value("${spring.cloud.config.server.git.username}")
 	private String githubUser;
 
 	public static void main(String[] args) {
