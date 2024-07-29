@@ -50,8 +50,8 @@ It's also possible to use a PostgreSQL database changing profile to "dev". If yo
 6. Execute the script ``data.sql`` located in ``hr-user/src/main/resources`` folder in the ``db_hr_user`` database
 
 7. Fork the configuration repository:
-```bash
-git clone https://github.com/samanthamaiaduarte/microservice-project-config.git
+```
+https://github.com/samanthamaiaduarte/microservice-project-config.git
 ```
 6. In the GitHub repository you just forked, edit ``hr-user-dev.properties`` file, replacing:<br/>
 a. {SERVER_NAME} for your PostgreSQL server name or ip address<br/>
